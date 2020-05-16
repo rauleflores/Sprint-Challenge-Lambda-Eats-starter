@@ -1,11 +1,19 @@
 import React from "react";
+import HomePage from "./components/HomePage";
+import Nav from "./components/Nav";
+import "./App.css";
+import { Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <div className="center-all">
+      <div className="appHeader">
+        <h1>Lambda Eats</h1>
+        <Nav />
+      </div>
+      <Route exact path="/" component={() => <HomePage />} />
+      <Route exact path="/pizza" />
+    </div>
   );
 };
 export default App;
