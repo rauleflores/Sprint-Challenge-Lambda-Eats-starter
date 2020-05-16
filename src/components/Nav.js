@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Menu, MenuItem } from "@material-ui/core";
+import { Button, Menu, MenuItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles({
-  button: {},
+  button: {
+    color: "#a5a79a",
+    backgroundColor: "#ECA442",
+  },
+  anchor: {
+    width: "75px",
+    textAlign: "center",
+    textDecoration: "none",
+    color: "#ca2521",
+  },
 });
 
 export default function Nav(props) {
@@ -37,10 +47,14 @@ export default function Nav(props) {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}>
-          <a href="#">Home</a>
+          <NavLink to={"/"} className={classes.anchor}>
+            Home
+          </NavLink>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <a href="#">Pizza</a>
+          <NavLink to={"/pizza"} className={classes.anchor}>
+            Pizza
+          </NavLink>
         </MenuItem>
       </Menu>
     </div>
