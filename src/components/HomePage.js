@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Typography, Grid, Paper } from "@material-ui/core";
+import React from "react";
 import { makeStyles } from "@material-ui/core";
-
-import Header from "./Nav";
+import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -18,7 +16,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     margin: "auto",
-    width: "80%",
+    width: "100%",
     height: "200px",
     fontSize: "30px",
   },
@@ -29,18 +27,32 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
   },
+  anchor: {
+    width: "150px",
+    textAlign: "center",
+    textDecoration: "none",
+    color: "#ca2521",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  pizzaText: {
+    fontSize: "24px",
+    textAlign: "center",
+  },
 });
 
 const HomePage = () => {
   const classes = useStyles();
   return (
     <>
+      <div className={classes.header}>
+        <h2>Food delivered while you code!</h2>
+      </div>
       <div className={classes.root}>
-        <div className={classes.header}>
-          <h2>Pizza Time!</h2>
-        </div>
         <div className={classes.container}>
-          <div>
+          <div className={classes.pizzaText}>
+            <h3>Lorem's Pizza</h3>
             <h3>Our Pizza is delicious!</h3>
           </div>
           <div>
@@ -58,6 +70,9 @@ const HomePage = () => {
               platter Chicago style.
             </p>
           </div>
+          <NavLink to={"/pizza"} className={classes.anchor}>
+            Click here for pizza!
+          </NavLink>
         </div>
       </div>
     </>

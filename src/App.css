@@ -1,4 +1,5 @@
 .center-all {
+  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +12,6 @@
   align-items: center;
   padding: 25px 0;
   margin-bottom: 50px;
-  background-color: #622a0f;
-  color: #ca2521;
+  background-color: #dcae96;
+  color: #5290a8;
 }
