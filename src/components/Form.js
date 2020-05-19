@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import randomId from "../randomId";
 import * as yup from "yup";
 import { makeStyles } from "@material-ui/core";
 import axios from "axios";
@@ -205,7 +204,6 @@ export default function Form(props) {
         </div>
         <div className={classes.inputDiv}>
           <input
-            id={randomId()}
             className={classes.input}
             name="name"
             placeholder="ex: John Smith"
@@ -232,11 +230,11 @@ export default function Form(props) {
             onChange={inputChange}
           >
             <option value={null}>--Choose an option--</option>
-            <option value="personal">Personal</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="x-large">X-Large</option>
+            <option value="per">Personal</option>
+            <option value="sml">Small</option>
+            <option value="med">Medium</option>
+            <option value="lrg">Large</option>
+            <option value="xlrg">X-Large</option>
           </select>
         </div>
       </div>
@@ -248,6 +246,7 @@ export default function Form(props) {
           <label>
             Pepperoni
             <input
+              value="pepperoni"
               name="pepperoni"
               type="checkbox"
               checked={formState.pepperoni}
@@ -257,6 +256,7 @@ export default function Form(props) {
           <label>
             Sausage
             <input
+              value="sausage"
               name="sausage"
               type="checkbox"
               checked={formState.sausage}
@@ -266,6 +266,7 @@ export default function Form(props) {
           <label>
             Pineapple
             <input
+              value="pineapple"
               name="pineapple"
               type="checkbox"
               checked={formState.pineapple}
@@ -275,6 +276,7 @@ export default function Form(props) {
           <label>
             No Topping/Cheese
             <input
+              value="cheese"
               name="cheese"
               type="checkbox"
               checked={formState.cheese}
