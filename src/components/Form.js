@@ -13,6 +13,8 @@ const useStyles = makeStyles({
   title: {
     width: "100%",
     height: "200px",
+    fontSize: "42px",
+    letterSpacing: "8px",
     margin: "0",
     backgroundColor: "#7C2400",
     display: "flex",
@@ -195,7 +197,7 @@ export default function Form(props) {
       autoComplete="off"
       onSubmit={(e) => formSubmit(e)}
     >
-      <h2 className={classes.title}>Italiano's Pizza</h2>
+      <h2 className={classes.title}>Lorem's Pizza</h2>
       <div className={classes.container}>
         <div className={classes.labelDiv}>
           <label htmlFor="name" className={classes.label}>
